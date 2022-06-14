@@ -59,6 +59,7 @@ final class SimpleSubQueue implements ISubQueue<AbsSubDLoadUtil> {
   }
 
   synchronized AbsSubDLoadUtil getLoaderUtil(String key) {
+    if(key == null) return null;
     AbsSubDLoadUtil sub = mExec.get(key);
     if (sub != null) {
       return sub;

@@ -203,7 +203,7 @@ final class HttpDFileInfoTask implements IInfoTask, Runnable {
         return;
       }
       mEntity.setFileSize(len);
-      mTaskWrapper.setSupportBP(true);
+      mTaskWrapper.setSupportBP(false);
       end = true;
     } else if (code == HttpURLConnection.HTTP_OK) {
       String contentType = conn.getHeaderField("Content-Type");
